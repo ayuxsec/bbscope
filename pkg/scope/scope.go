@@ -43,7 +43,7 @@ func createLine(scopeElement ScopeElement, url, outputFlags, delimiter string) s
 			if scopeElement.Target != "NO_IN_SCOPE_TABLE" {
 				line.WriteString(scopeElement.Target + delimiter)
 			} else {
-				fmt.Fprint(os.Stderr, scopeElement.Target)
+				fmt.Fprint(os.Stderr, scopeElement.Target+"\n")
 			}
 		case 'd':
 			line.WriteString(scopeElement.Description + delimiter)
